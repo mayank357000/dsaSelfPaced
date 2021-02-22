@@ -34,4 +34,26 @@ binary array : 1 1 1 1 1 0 0 0 is 5.
       return lastocc+1; //agr lastocc mila hi nhi toh zeroes ka array,aur lastocc ki value badli nhi as arr[mid+1]=0//second ele zero worst case 
     }
     
-    <<2>> 
+    <<2>> Square root of a Number//We need floor of it 
+    
+    
+    long floorSqrt(long x)
+	 {
+	  long low=1;
+	  long high=x;
+	  long mid,ans=0;
+	  while(low<=high)
+	  {
+	      mid=low+(high-low)/2;
+	      if((mid*mid)==x)
+	      return mid;
+	      else if((mid*mid)<x)
+	      {
+	      low=mid+1;
+	      ans=mid;//incase perfect value nhi mili toh return krna pdega//agr right main gye aur nhi mila answer toh mid galat milega
+	      }
+	      else
+	      high=mid-1;
+	  }
+	  return ans;
+	 }
