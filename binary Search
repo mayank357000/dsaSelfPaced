@@ -33,3 +33,5 @@ binary array : 1 1 1 1 1 0 0 0 is 5.
      }
       return lastocc+1; //agr lastocc mila hi nhi toh zeroes ka array,aur lastocc ki value badli nhi as arr[mid+1]=0//second ele zero worst case 
     }
+    
+    <<2>> 
