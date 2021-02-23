@@ -57,3 +57,28 @@ binary array : 1 1 1 1 1 0 0 0 is 5.
 	  }
 	  return ans;
 	 }
+	 
+	 
+<<<3>>> Floor present of any number x(maximum lesser or equal)
+
+static int findFloor(long arr[], int n, long x)
+    {
+      int high=n-1;
+      int low=0;
+      int mid;
+      if(n==1&&arr[0]<=x)
+      return 0;
+      if(arr[n-1]<=x)//last element ko handle pehle hi kr lo ,so no array out of bound in whiel loop
+      return n-1;
+      while(low<=high)
+      {
+          mid=low+(high-low)/2;
+          if(arr[mid]<=x&&arr[mid+1]>x)
+          return mid;
+          if(arr[mid]>x)
+          high=mid-1;
+          else
+          low=mid+1;
+      }
+      return -1;
+    }
